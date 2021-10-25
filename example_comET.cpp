@@ -1,7 +1,6 @@
 #include<iostream>
 
 #include<comET.hpp>
-#include<BinaryOP.hpp>
 
 
 #ifndef LONG
@@ -27,6 +26,11 @@ int main(){
     std::cout<<complex+complex<<std::endl;
     std::cout<<1+complex<<std::endl;
     std::cout<<complex+1<<std::endl;
+
+
+    std::cout<<complex*complex<<std::endl;
+    std::cout<<3*complex<<std::endl;
+    std::cout<<complex*3<<std::endl;
 
 
     return 0;
