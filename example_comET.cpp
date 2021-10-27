@@ -17,17 +17,24 @@ int main(){
     comET::complex<LD> real(3);
     comET::complex<LD> complex(3,2);
 
+    std::cout<<"--Complexes--\n";
     std::cout<<zero<<std::endl;
     std::cout<<real<<std::endl;
     std::cout<<complex<<std::endl;
 
-
     
+    std::cout<<"--Addition--\n";
     std::cout<<complex+complex<<std::endl;
     std::cout<<1+complex<<std::endl;
     std::cout<<complex+1<<std::endl;
 
+    std::cout<<"--Subtraction--\n";
+    std::cout<<complex-complex<<std::endl;
+    std::cout<<1.3-complex<<std::endl;
+    std::cout<<complex-1.3<<std::endl;
 
+
+    std::cout<<"--Multiplication--\n";
     std::cout<<complex*complex<<std::endl;
     std::cout<<3*complex<<std::endl;
     std::cout<<complex*3<<std::endl;
