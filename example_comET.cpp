@@ -14,8 +14,8 @@
 int main(){
 
     comET::complex<LD> zero;
-    comET::complex<LD> real(3);
-    comET::complex<LD> complex(3,2);
+    comET::complex real(3);//you can skip the template argument if you initialize it like this
+    comET::complex complex(3,2);//you can skip the template argument if you initialize it like this
 
     std::cout<<"--Complexes--\n";
     std::cout<<zero<<std::endl;
