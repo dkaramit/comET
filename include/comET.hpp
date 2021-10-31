@@ -11,10 +11,14 @@
 #include<Division.hpp>
 
 /*---Include Unary operators*/
+#include<UnaryOP.hpp>
 #include<Negation.hpp>
 #include<Conjugation.hpp>
 #include<Absolute.hpp>
 #include<Argument.hpp>
 
+#include<Log.hpp>
+#include<Exp.hpp>
+#include<Pow.hpp>
 
 #endif

@@ -19,6 +19,8 @@ class complex{
     complex():real(0),imaginary(0){}
     complex(const LD &real):real(real),imaginary(0){}
     complex(const LD &real, const LD &imaginary):real(real),imaginary(imaginary){}
+    
+    complex(const complex &z):real(z.Re()),imaginary(z.Im()){}
 
     LD Re()const{return real;}
     LD Im()const{return imaginary;}

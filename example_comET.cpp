@@ -16,13 +16,16 @@
 // #define TestSub
 // #define TestMult
 // #define TestDiv
-// #define TestArg
 // #define TestNeg
 // #define TestConj
 // #define TestAbs
-#define TestArg
+// #define TestArg
+// #define TestLog
+// #define TestExp
+// #define TestPow
 
 
+#define Chaos
 
 
 
@@ -77,25 +80,56 @@ int main(){
 
     #ifdef TestConj   
     std::cout<<"--Conjugation--\n";
-    std::cout<<comET::Conjugate(complex)<<std::endl;
-    std::cout<<comET::Conjugate(complex+complex)<<std::endl;
-    std::cout<<comET::Conjugate(comET::Conjugate(complex+complex))<<std::endl;
+    std::cout<<comET::conjugate(complex)<<std::endl;
+    std::cout<<comET::conjugate(complex+complex)<<std::endl;
+    std::cout<<comET::conjugate(comET::conjugate(complex+complex))<<std::endl;
+    std::cout<<comET::conjugate(2)<<std::endl;
     #endif
     
     #ifdef TestAbs   
     std::cout<<"--Absolute value--\n";
-    std::cout<<comET::Abs(complex)<<std::endl;
-    std::cout<<comET::Abs(complex+complex)<<std::endl;
-    std::cout<<comET::Abs(3.2)<<std::endl;
+    std::cout<<comET::abs(complex)<<std::endl;
+    std::cout<<comET::abs(complex+complex)<<std::endl;
+    std::cout<<comET::abs(3.2)<<std::endl;
     #endif
     
 
     
     #ifdef TestArg   
     std::cout<<"--Argument--\n";
-    std::cout<<comET::Arg(complex)<<std::endl;//this should be zero
-    std::cout<<comET::Arg(-1.)<<std::endl;//be careful! When you give integers, expect integers
-    std::cout<<comET::Arg(comET::Arg(complex))<<std::endl;//this should be zero
+    std::cout<<comET::arg(complex)<<std::endl;//this should be zero
+    std::cout<<comET::arg(-1.)<<std::endl;//be careful! When you give integers, expect integers
+    std::cout<<comET::arg(comET::arg(complex))<<std::endl;//this should be zero
+    #endif
+    
+    #ifdef TestLog
+    std::cout<<"--Log--\n";
+    std::cout<<comET::log(complex)<<std::endl;
+    std::cout<<comET::log(2.)<<std::endl;
+    std::cout<<comET::log(-2.)<<std::endl;
+    #endif
+    
+
+    #ifdef TestExp
+    std::cout<<"--Exp--\n";
+    std::cout<<comET::exp(complex)<<std::endl;
+    std::cout<<comET::exp(2.)<<std::endl;
+    std::cout<<comET::exp(-2.)<<std::endl;
+    #endif
+    
+
+    #ifdef TestPow
+    std::cout<<"--Pow--\n";
+    std::cout<<comET::pow(complex,complex)<<std::endl;
+    std::cout<<comET::pow(complex,2.)<<std::endl;
+    std::cout<<comET::pow(2.,complex)<<std::endl;
+    std::cout<<comET::pow(2.,2.)<<std::endl;
+    #endif
+    
+    #ifdef Chaos
+    std::cout<<"--Complicated Expression--\n";
+    std::cout<<comET::log(comET::pow(3.*complex+comET::log(complex*3+comET::exp(complex-2)),-complex))<<std::endl;
+    std::cout<<comET::log(comET::pow(complex,-complex))<<std::endl;
     #endif
     
 
